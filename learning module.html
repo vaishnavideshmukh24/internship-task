@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Python Programming Module</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+            background: white;
+        }
+        h1, h2 {
+            color: #333;
+        }
+        .video {
+            margin: 20px 0;
+        }
+        .quiz {
+            margin: 20px 0;
+        }
+        .question {
+            margin: 10px 0;
+        }
+        .question input {
+            margin-right: 10px;
+        }
+        .submit-btn {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Basic Python Programming</h1>
+
+        <section>
+            <h2>Section 1: Introduction to Python</h2>
+            <div class="video">
+                <h3>Video Tutorial</h3>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/kqtD5dpn9C8" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <div class="quiz">
+                <h3>Quiz</h3>
+                <div class="question">
+                    <p>1. Who created Python?</p>
+                    <input type="radio" id="q1a" name="q1" value="A">
+                    <label for="q1a">A) Guido van Rossum</label><br>
+                    <input type="radio" id="q1b" name="q1" value="B">
+                    <label for="q1b">B) James Gosling</label><br>
+                    <input type="radio" id="q1c" name="q1" value="C">
+                    <label for="q1c">C) Dennis Ritchie</label><br>
+                    <input type="radio" id="q1d" name="q1" value="D">
+                    <label for="q1d">D) Bjarne Stroustrup</label>
+                </div>
+                <div class="question">
+                    <p>2. What year was Python first released?</p>
+                    <input type="radio" id="q2a" name="q2" value="A">
+                    <label for="q2a">A) 1991</label><br>
+                    <input type="radio" id="q2b" name="q2" value="B">
+                    <label for="q2b">B) 1985</label><br>
+                    <input type="radio" id="q2c" name="q2" value="C">
+                    <label for="q2c">C) 2000</label><br>
+                    <input type="radio" id="q2d" name="q2" value="D">
+                    <label for="q2d">D) 1995</label>
+                </div>
+                <button class="submit-btn">Submit</button>
+            </div>
+        </section>
+
+        <section>
+            <h2>Section 2: Basic Syntax and Operations</h2>
+            <div class="video">
+                <h3>Video Tutorial</h3>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/rfscVS0vtbw" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <div class="quiz">
+                <h3>Quiz</h3>
+                <div class="question">
+                    <p>1. Which of the following is a valid variable name in Python?</p>
+                    <input type="radio" id="q3a" name="q3" value="A">
+                    <label for="q3a">A) 1variable</label><br>
+                    <input type="radio" id="q3b" name="q3" value="B">
+                    <label for="q3b">B) variable1</label><br>
+                    <input type="radio" id="q3c" name="q3" value="C">
+                    <label for="q3c">C) variable-1</label><br>
+                    <input type="radio" id="q3d" name="q3" value="D">
+                    <label for="q3d">D) variable 1</label>
+                </div>
+                <div class="question">
+                    <p>2. What is the output of `print(2 + 3 * 4)`?</p>
+                    <input type="radio" id="q4a" name="q4" value="A">
+                    <label for="q4a">A) 20</label><br>
+                    <input type="radio" id="q4b" name="q4" value="B">
+                    <label for="q4b">B) 14</label><br>
+                    <input type="radio" id="q4c" name="q4" value="C">
+                    <label for="q4c">C) 18</label><br>
+                    <input type="radio" id="q4d" name="q4" value="D">
+                    <label for="q4d">D) 12</label>
+                </div>
+                <button class="submit-btn">Submit</button>
+            </div>
+        </section>
+
+        <section>
+            <h2>Section 3: Control Structures</h2>
+            <div class="video">
+                <h3>Video Tutorial</h3>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/8ext9G7xspg" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <div class="quiz">
+                <h3>Quiz</h3>
+                <div class="question">
+                    <p>1. What will the following code print?<br>
+                    ```python<br>
+                    if 5 > 2:<br>
+                        print("Five is greater than two")<br>
+                    ```</p>
+                    <input type="radio" id="q5a" name="q5" value="A">
+                    <label for="q5a">A) Nothing</label><br>
+                    <input type="radio" id="q5b" name="q5" value="B">
+                    <label for="q5b">B) Error</label><br>
+                    <input type="radio" id="q5c" name="q5" value="C">
+                    <label for="q5c">C) Five is greater than two</label><br>
+                    <input type="radio" id="q5d" name="q5" value="D">
+                    <label for="q5d">D) Two is greater than five</label>
+                </div>
+                <div class="question">
+                    <p>2. How many times will the following loop execute?<br>
+                    ```python<br>
+                    for i in range(3):<br>
+                        print(i)<br>
+                    ```</p>
+                    <input type="radio" id="q6a" name="q6" value="A">
+                    <label for="q6a">A) 1</label><br>
+                    <input type="radio" id="q6b" name="q6" value="B">
+                    <label for="q6b">B) 2</label><br>
+                    <input type="radio" id="q6c" name="q6" value="C">
+                    <label for="q6c">C) 3</label><br>
+                    <input type="radio" id="q6d" name="q6" value="D">
+                    <label for="q6d">D) 4</label>
+                </div>
+                <button class="submit-btn">Submit</button>
+            </div>
+        </section>
+
+        <section>
+            <h2>Section 4: Functions and Modules</h2>
+            <div class="video">
+                <h3>Video Tutorial</h3>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/9Os0o3wzS_I" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <div class="quiz">
+                <h3>Quiz</h3>
+                <div class="question">
+                    <p>1. How do you define a function in Python?</p>
+                    <input type="radio" id="q7a" name="q7" value="A">
+                    <label for="q7a">A) `def function_name():`</label><br>
+                    <input type="radio" id="q7
+
+
+
