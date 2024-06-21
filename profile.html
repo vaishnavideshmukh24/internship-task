@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f2f5;
+            margin: 0;
+            padding: 0;
+        }
+
+        .profile-container {
+            width: 90%;
+            max-width: 700px;
+            margin: 50px auto;
+            background-color: #fff;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .profile-header {
+            text-align: center;
+            padding: 40px;
+            background: linear-gradient(to right, #8f9193, #52d9d9);
+            color: white;
+        }
+
+        .profile-picture {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            border: 4px solid #fff;
+            margin-bottom: 10px;
+        }
+
+        .profile-name {
+            font-size: 24px;
+            margin: 10px 0 5px;
+        }
+
+        .profile-title {
+            font-size: 18px;
+            color: #e1f0f5;
+        }
+
+        .upload-form {
+            display: inline-block;
+            margin-top: 10px;
+        }
+
+        .upload-label {
+            display: block;
+            margin-bottom: 5px;
+            color: #fff;
+        }
+
+        .upload-btn {
+            padding: 10px 20px;
+            background-color: #fff;
+            color: #4facfe;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+
+        .upload-btn:hover {
+            background-color: #e0f5ff;
+        }
+
+        .profile-content {
+            padding: 30px;
+        }
+
+        .profile-content h2 {
+            font-size: 20px;
+            color: #333;
+            border-bottom: 2px solid #7a7c7e;
+            padding-bottom: 5px;
+            margin-bottom: 15px;
+        }
+
+        .profile-content p {
+            font-size: 16px;
+            color: #555;
+            line-height: 1.6;
+        }
+
+        .student-info, .courses-info,.manage-profile li {
+            list-style: none;
+            padding: 0;
+        }
+
+        .student-info li, .courses-info li,.manage-profile li{
+            font-size: 16px;
+            color: #555;
+            margin-bottom: 10px;
+        }
+
+        .update-btn {
+            padding: 10px 20px;
+            background-color: #fff;
+            color: #4facfe;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+
+        .update-btn:hover {
+            background-color: #e0f5ff;
+        }
+
+        .form-group input[type="update"] {
+            background: #999;
+            margin-left: 0.5rem;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="profile-container">
+        <div class="profile-header">
+            <img src="default-profile.png" alt="Profile Picture" class="profile-picture" id="profilePicture">
+            <h1 class="profile-name">Vaishnavi Deshmukh</h1>
+            
+            <form id="uploadForm" class="upload-form">
+                <label for="profileImage" class="upload-label">Upload Photo</label>
+                <input type="file" id="profileImage" name="profileImage" accept="image/*">
+                <button type="submit" class="upload-btn">Upload</button>
+            </form>
+        </div>
+        <div class="profile-content">
+            <h2>About Me</h2>
+            <p>Hello! I am vaishnavi, a passionate learner in the field of IT.</p>
+            <h2>Student Information</h2>
+            <ul class="student-info">
+                <li>STUDENT ID: 564747</li>
+                <li>Email: vaishnavi22@gmail.com</li>
+                <li>Phone: +919234567890</li>
+            </ul>
+            <h2>Courses Enrolled</h2>
+            <ul class="courses-info">
+                <li>full stack development</li>
+                <li>salesforce</li>
+                <li>Web Development</li>
+                <li>Machine Learning</li>
+                
+            </ul>
+            
+            <button type="submit" class="update-btn">Update</button>
+
+            
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('uploadForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const fileInput = document.getElementById('profileImage');
+            if (fileInput.files && fileInput.files[0]) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    document.getElementById('profilePicture').src = e.target.result;
+                };
+                reader.readAsDataURL(fileInput.files[0]);
+            }
+        });
+        
+</script>
+    
+</body>
+</html>
+
+
+
+
+
