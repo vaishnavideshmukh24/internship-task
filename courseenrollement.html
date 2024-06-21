@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Course Enrollment</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f0f0f0;
+        margin: 0;
+        padding: 0;
+    }
+
+    .container {
+        max-width: 600px;
+        margin: 50px auto;
+        background-color: #fff;
+        padding: 30px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .form-group {
+        margin-bottom: 15px;
+    }
+
+    label {
+        font-weight: bold;
+    }
+
+    input[type="text"],
+    select {
+        width: 100%;
+        padding: 8px;
+        font-size: 16px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
+
+    button {
+        background-color: #1B566D;
+        color: white;
+        border: none;
+        padding: 12px 20px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        cursor: pointer;
+        border-radius: 4px;
+    }
+
+    button:hover {
+        background-color: #1B566D;
+    }
+
+    input[type="checkbox"] {
+        margin-right: 10px;
+    }
+</style>
+</head>
+<body>
+<div class="container">
+    <h1>Course Enrollment</h1>
+    <form id="enrollmentForm" action="#">
+        <!-- Course Selection -->
+        <div class="form-group">
+            <label for="course">Select Course:</label>
+            <select id="course" name="course" required>
+                <option value="">Select a course</option>
+                <option value="SFDC interview preparation bundle"> SFDC interview preparation bundle</option>
+                <option value="Advance python course">Advance python course</option>
+                <option value="salesforce marketing cloud">salesforce marketing cloud</option>
+                <option value="data science ML & AI">data science ML & AI</option>
+                <option value="front end developer internship">front end developer internship</option>
+                <option value="full stack development internship"> full stack development internship</option>
+                <option value="Salesforce admin & Development"> Salesforce admin & Development</option>
+                <option value="UI/UX Internship"> UI/UX Internship</option>
+                <option value="Cyber Security internship">Cyber Security internship</option>
+                <option value="Python marathon"> Python marathon</option>
+                
+                <!-- Add more courses as needed -->
+            </select>
+        </div>
+
+        <!-- Prerequisites -->
+        <div class="form-group">
+            <label for="prerequisites">Prerequisites (if any):</label>
+            <input type="text" id="prerequisites" name="prerequisites" placeholder="Enter prerequisites">
+        </div>
+
+        <!-- Confirmation -->
+        <div class="form-group">
+            
+            <input type="checkbox" id="confirmation" name="confirmation" required>
+            <label for="confirmation">I confirm that I meet all prerequisites for the selected course.</label>
+        </div>
+
+        <!-- Submit Button -->
+        <button type="submit">Enroll</button>
+    </form>
+</div>
+</body>
+</html>
+
