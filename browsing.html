@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Browsing Interface</title>
+    <style>
+        /* Reset some default styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
+
+        header {
+            background: #374a48;
+            color: #ceaeae;
+            padding: 1rem 0;
+        }
+
+        header h1 {
+            text-align: center;
+            margin-bottom: 0.5rem;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin: 0 1rem;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        section#all-courses {
+            padding: 2rem 0;
+        }
+
+        .course-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            padding: 0 2rem;
+        }
+
+        .course-card {
+            background: #eaeaea;
+            padding: 2rem;
+            border-radius: 44px;
+            box-shadow: 0 12px 5px rgba(168, 63, 63, 0.1);
+            text-align: center;
+        }
+
+        .course-card img {
+            max-width: 100%;
+            border-radius: 8px;
+        }
+
+        .course-card h3 {
+            margin: 1rem 0 0.5rem;
+        }
+
+        .course-card p {
+            margin: 0.5rem 0;
+        }
+
+        
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Course Browser</h1>
+        <nav>
+            <ul>
+                <li><a href="#all-courses">All Courses</a></li>
+                <li><a href="#categories">Categories</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="all-courses">
+        <h2>All Courses</h2>
+        <div class="course-grid">
+            <div class="course-card">
+                <img src="course1.jpg" alt="Course 1">
+                <h3>SFDC interview preparation bundle</h3>
+                <p>Instructor: Joe donald</p>
+                <p>Category: Technical skills</p>
+            </div>
+            <div class="course-card">
+                <img src="course2.jpg" alt="Course 2">
+                <h3>Advance python course</h3>
+                <p>Instructor: Jaey Smith</p>
+                <p>Category: Education</p>
+            </div>
+            <div class="course-card">
+              <img src="course3.jpg" alt="Course 3">
+              <h3>salesforce marketing cloud</h3>
+              <p>Instructor: John watkins</p>
+              <p>Category: Education</p>
+          </div>
+          <div class="course-card">
+            <img src="course4.jpg" alt="Course 4">
+            <h3>Salesforce admin & Development</h3>
+            <p>Instructor: Marlin watkins</p>
+            <p>Category: Education</p>
+        </div>
+        <div class="course-card">
+          <img src="course5.jpg" alt="Course 5">
+          <h3>Salesforce CPQ</h3>
+          <p>Instructor: Conner Ward</p>
+          <p>Category:personal development</p>
+      </div>
+      <div class="course-card">
+        <img src="course6.jpg" alt="Course 6">
+        <h3>Salesforce Admin and development+LWC</h3>
+        <p>Instructor: Eli Bell</p>
+        <p>Category: personal development</p>
+    </div>
+    <div class="course-card">
+      <img src="course7.jpg" alt="Course 7">
+      <h3>data science ML & AI</h3>
+      <p>Instructor: eli ward</p>
+      <p>Category: personal development</p>
+  </div>
+  <div class="course-card">
+    <img src="course8.jpg" alt="Course 8">
+    <h3>front end developer internship</h3>
+    <p>Instructor: peter flores</p>
+    <p>Category: personal development </p>
+</div>
+<div class="course-card">
+  <img src="course9.jpg" alt="Course 9">
+  <h3>full stack development internship</h3>
+  <p>Instructor: Aidan jenkins</p>
+  <p>Category: personal development </p>
+</div>
+<div class="course-card">
+  <img src="course10.jpg" alt="Course 10">
+  <h3>UI/UX Internship</h3>
+  <p>Instructor: John jenkins</p>
+  <p>Category: personal development </p>
+</div>
+<div class="course-card">
+  <img src="course11.jpg" alt="Course 11">
+  <h3>salesforce development</h3>
+  <p>Instructor: Joey Doe</p>
+  <p>Category: personal development</p>
+</div>
+      <div class="course-card">
+        <img src="course12.jpg" alt="Course 12">
+        <h3>Cyber Security internship</h3>
+        <p>Instructor: Joey bell</p>
+        <p>Category: personal development</p>
+    </div>
+    <div class="course-card">
+      <img src="course13.jpg" alt="Course 13">
+      <h3>Python marathon</h3>
+      <p>Instructor: John bell </p>
+      <p>Category: Software & Technology</p>
+  </div>
+            <!-- Add more course cards as needed -->
+        </div>
+    </section>
+
+    
+</body>
+</html>
