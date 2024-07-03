@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Management Mobile App</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f5f5f5;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 400px;
+            background-color: #fff;
+            padding: 2em;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            border-radius: 8px;
+        }
+
+        header, footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1em 0;
+            border-radius: 8px 8px 0 0;
+        }
+
+        section {
+            margin-bottom: 1.5em;
+        }
+
+        #sync-button {
+            padding: 0.7em 1.2em;
+            font-size: 1em;
+            cursor: pointer;
+            border: none;
+            background-color: #007bff;
+            color: #fff;
+            border-radius: 4px;
+            width: 100%;
+        }
+
+        #sync-button:hover {
+            background-color: #0056b3;
+        }
+
+        #progress-container, #analytics-container {
+            border: 1px solid #ccc;
+            padding: 1em;
+            min-height: 100px;
+            border-radius: 4px;
+            background-color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Course Management</h1>
+        </header>
+
+        <main>
+            <!-- Synchronization Section -->
+            <section id="sync-section">
+                <h2>Data Synchronization</h2>
+                <button id="sync-button">Sync Course Data</button>
+            </section>
+
+            <!-- Student Progress Section -->
+            <section id="progress-section">
+                <h2>Student Progress</h2>
+                <div id="progress-container">
+                    <!-- Dynamic content will be loaded here -->
+                </div>
+            </section>
+
+            <!-- Performance Analytics Section -->
+            <section id="analytics-section">
+                <h2>Performance Analytics</h2>
+                <div id="analytics-container">
+                    <!-- Dynamic content will be loaded here -->
+                </div>
+            </section>
+        </main>
+
+        
+    </div>
+
+    <script>
+        document.getElementById('sync-button').addEventListener('click', syncData);
+
+        function syncData() {
+            // Placeholder function to simulate data synchronization
+            alert('Synchronizing course data...');
+            loadStudentProgress();
+            loadPerformanceAnalytics();
+        }
+
+        function loadStudentProgress() {
+            const progressContainer = document.getElementById('progress-container');
+            // Simulate fetching student progress data
+            progressContainer.innerHTML = '<p>Student progress data loaded.</p>';
+        }
+
+        function loadPerformanceAnalytics() {
+            const analyticsContainer = document.getElementById('analytics-container');
+            // Simulate fetching performance analytics data
+            analyticsContainer.innerHTML = '<p>Performance analytics data loaded.</p>';
+        }
+    </script>
+</body>
+</html>
+
+
+
