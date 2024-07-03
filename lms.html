@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LMS Integration UI</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+
+        .app-container {
+            width: 100%;
+            max-width: 416px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            overflow: hidden;
+            background-color: white;
+        }
+
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+        }
+
+        nav .logo {
+            font-size: 1.5em;
+            margin-right: 20px;
+        }
+
+        nav .search-bar input {
+            padding: 5px;
+            margin-right: 20px;
+        }
+
+        nav .notifications, nav .profile {
+            margin-left: 20px;
+        }
+
+        .container {
+            display: flex;
+            height: calc(59vh - -90px);
+        }
+
+        aside {
+            width: 80px;
+            background-color: #f4f4f4;
+            padding: 15px;
+        }
+
+        aside ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        aside ul li {
+            margin-bottom: 10px;
+        }
+
+        aside ul li a {
+            text-decoration: none;
+            color: #333;
+        }
+
+        main {
+            flex: 1;
+            padding: 20px;
+            overflow-y: auto;
+        }
+
+        main h2 {
+            margin-top: 0;
+        }
+
+        .overview {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .widget {
+            background-color: #e7e7e7;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 15px;
+        }
+
+       
+    </style>
+</head>
+<body>
+    <div class="app-container">
+        <header>
+            <nav>
+                <div class="logo">LMS</div>
+                <div class="search-bar">
+                    <input type="text" placeholder="Search...">
+                </div>
+                <div class="notifications">
+                    <button onclick="alert('No new notifications')">Notifications</button>
+                </div>
+                <div class="profile">
+                    <button onclick="alert('Profile settings')">Profile</button>
+                </div>
+            </nav>
+        </header>
+
+        <div class="container">
+            <aside>
+                <ul>
+                    <li><a href="#dashboard" onclick="showSection('dashboard')">Dashboard</a></li>
+                    <li><a href="#courses" onclick="showSection('courses')">Courses</a></li>
+                    <li><a href="#calendar" onclick="showSection('calendar')">Calendar</a></li>
+                    <li><a href="#messages" onclick="showSection('messages')">Messages</a></li>
+                    <li><a href="#settings" onclick="showSection('settings')">Settings</a></li>
+                </ul>
+            </aside>
+
+            <main>
+                <section id="dashboard">
+                    <h2>Dashboard</h2>
+                    <div class="overview">
+                        <div class="widget">
+                            <h3>Upcoming Deadlines</h3>
+                            <ul>
+                                <li>Assignment 1 - Due: June 3</li>
+                                <li>Quiz 2 - Due: June 12</li>
+                            </ul>
+                        </div>
+                        <div class="widget">
+                            <h3>Recent Activity</h3>
+                            <ul>
+                                <li>Graded: Assignment 2</li>
+                                <li>New Announcement in Python</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="courses" style="display:none;">
+                    <h2>Courses</h2>
+                    <ul>
+                        <li><a href="#course1">Python</a></li>
+                        <li><a href="#course2">Salesforce</a></li>
+                        <li><a href="#course3">Data Science </a></li>
+                    </ul>
+                </section>
+
+                <section id="calendar" style="display:none;">
+                    <h2>Calendar</h2>
+                    <div class="calendar-view">
+                        <!-- Calendar implementation here -->
+                    </div>
+                </section>
+
+                <section id="messages" style="display:none;">
+                    <h2>Messages</h2>
+                    <div class="messages-view">
+                        <!-- Messages implementation here -->
+                    </div>
+                </section>
+
+                <section id="settings" style="display:none;">
+                    <h2>Settings</h2>
+                    <div class="settings-view">
+                        <!-- Settings implementation here -->
+                    </div>
+                </section>
+            </main>
+        </div>
+
+      
+    </div>
+
+    <script>
+        function showSection(sectionId) {
+            const sections = document.querySelectorAll('main section');
+            sections.forEach(section => {
+                section.style.display = 'none';
+            });
+            document.getElementById(sectionId).style.display = 'block';
+        }
+    </script>
+</body>
+</html>
+
