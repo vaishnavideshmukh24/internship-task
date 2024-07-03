@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notification Settings</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+        .container {
+            max-width: 400px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .header .title {
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .header .close {
+            font-size: 16px;
+            color: #007bff;
+            cursor: pointer;
+        }
+        .setting {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 0;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        .setting:last-child {
+            border-bottom: none;
+        }
+        .setting-label {
+            font-size: 16px;
+            flex: 1;
+        }
+        .setting-description {
+            font-size: 14px;
+            color: #666;
+        }
+        .switch {
+            position: relative;
+            display: inline-block;
+            width: 40px;
+            height: 20px;
+        }
+        .switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #ccc;
+            transition: .4s;
+            border-radius: 20px;
+        }
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 16px;
+            width: 16px;
+            left: 2px;
+            bottom: 2px;
+            background-color: white;
+            transition: .4s;
+            border-radius: 50%;
+        }
+        input:checked + .slider {
+            background-color: #007bff;
+        }
+        input:checked + .slider:before {
+            transform: translateX(20px);
+        }
+        .reset {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
+        }
+        .reset button {
+            background-color: #e10067;
+            color: #ffffff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <span class="close">Close</span>
+            <span class="title">Notifications</span>
+        </div>
+        <div class="setting">
+            <div>
+                <div class="setting-label">Send course updates</div>
+                <div class="setting-description">Send Push notification for course updates</div>
+            </div>
+            <label class="switch">
+                <input type="checkbox" checked>
+                <span class="slider"></span>
+            </label>
+        </div>
+        <div class="setting">
+            <div>
+                <div class="setting-label">Empty buffer</div>
+                <div class="setting-description">Send push notification if a buffer of a profile is empty</div>
+            </div>
+            <label class="switch">
+                <input type="checkbox" checked>
+                <span class="slider"></span>
+            </label>
+        </div>
+        <div class="setting">
+            <div>
+                <div class="setting-label">send announcement </div>
+                <div class="setting-description">Send push notification if there is a new announcement</div>
+            </div>
+            <label class="switch">
+                <input type="checkbox" checked>
+                <span class="slider"></span>
+            </label>
+        </div>
+        <div class="setting">
+            <div>
+                <div class="setting-label">App Failed Updates</div>
+                <div class="setting-description">Send push notification if an update fails to post</div>
+            </div>
+            <label class="switch">
+                <input type="checkbox" checked>
+                <span class="slider"></span>
+            </label>
+        </div>
+        <div class="reset">
+            <button>Reset Push Notifications</button>
+        </div>
+    </div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
