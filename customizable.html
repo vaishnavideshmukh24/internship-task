@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notification Preferences</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 396px;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 43px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        .notificationOption {
+            margin-bottom: 10px;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            float: right;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Notification Preferences</h1>
+        <form id="notificationForm">
+            <div class="notificationOption">
+                <label>
+                    <input type="checkbox" name="emailNotifications" checked>
+                    Receive Email Notifications
+                </label>
+            </div>
+            <div class="notificationOption">
+                <label>
+                    <input type="checkbox" name="smsNotifications">
+                    Receive SMS Notifications
+                </label>
+            </div>
+            <div class="notificationOption">
+                <label>
+                    <input type="checkbox" name="pushNotifications">
+                    Receive Push Notifications
+                </label>
+            </div>
+            <button type="submit">Save Preferences</button>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('notificationForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            
+            // Retrieve checkbox values
+            var emailNotifications = document.getElementsByName('emailNotifications')[0].checked;
+            var smsNotifications = document.getElementsByName('smsNotifications')[0].checked;
+            var pushNotifications = document.getElementsByName('pushNotifications')[0].checked;
+            
+            // Simulate saving preferences (replace with actual backend integration)
+            console.log('Email Notifications:', emailNotifications);
+            console.log('SMS Notifications:', smsNotifications);
+            console.log('Push Notifications:', pushNotifications);
+            
+            alert('Preferences saved successfully!');
+        });
+    </script>
+</body>
+</html>
+
