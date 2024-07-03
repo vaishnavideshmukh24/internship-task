@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback Form</title>
+    <style>
+        .feedback-form {
+            max-width: 300px;
+            margin: 50px auto;
+            padding: 30px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+        .feedback-form h2 {
+            margin-bottom: 20px;
+        }
+        .emojis {
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 20px;
+        }
+        .emoji {
+            font-size: 2em;
+            cursor: pointer;
+        }
+        .emoji.selected {
+            border: 2px solid #000;
+            border-radius: 50%;
+        }
+        .feedback-form textarea {
+            width: 91%;
+            height: 60px;
+            margin-bottom: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-family: Arial, sans-serif;
+        }
+        .feedback-form button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .feedback-form button:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+        .skip {
+            margin-top: 10px;
+            display: block;
+            color: #007bff;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<div class="feedback-form">
+    <h2>How likely are you to answer to this question?</h2>
+    <div class="emojis">
+        <div class="emoji" data-value="sad">&#128577;</div>
+        <div class="emoji" data-value="neutral">&#128528;</div>
+        <div class="emoji selected" data-value="happy">&#128515;</div>
+    </div>
+    <textarea placeholder="Tell us how we can improve"></textarea>
+    <button type="submit">Submit</button>
+    <span class="skip">Skip</span>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const emojis = document.querySelectorAll('.emoji');
+        emojis.forEach(emoji => {
+            emoji.addEventListener('click', function () {
+                emojis.forEach(e => e.classList.remove('selected'));
+                this.classList.add('selected');
+            });
+        });
+    });
+</script>
+
+</body>
+</html>
+
+
+
+
+            
+
